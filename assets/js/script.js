@@ -2,7 +2,9 @@ var cocktailByLetter = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f
 var container = document.getElementById('container')
 var drink;
 
-
+var coldDayDrinks = []
+var warmDayDrinks = []
+var hotDayDrinks = []
 
 
 function getCocktails(firstLetter) {
@@ -13,14 +15,20 @@ function getCocktails(firstLetter) {
         return;
       }
       res.json().then(function (data) {
-        drink = data.drinks[1]
-        console.log(drink)
-        console.log(`${drink.strMeasure1} ${drink.strIngredient1}`)
-        console.log(`${drink.strMeasure1} ${drink.strIngredient1}`)
-  console.log(`${drink.strMeasure2} ${drink.strIngredient2}`)
-  console.log(`${drink.strMeasure3} ${drink.strIngredient3}`)
-  console.log(`${drink.strMeasure4} ${drink.strIngredient4}`)
-       
+        console.log(data);
+        var drinks = data.drinks
+        for (let i = 0; i < drinks.length; i++) {
+          // basic structure for individual cocktail cards.
+          drink = data.drinks[i]
+          console.log(drink.strDrink)
+          console.log(drink.strInstructions)
+          console.log(drink.strGlass);
+
+          getRecipe(drink)
+          
+        }
+
+  
       });
     })
     .catch(function (err) {
@@ -28,13 +36,8 @@ function getCocktails(firstLetter) {
     });
 }
 
-getCocktails("c");
-
-function getRecipe (d) {
-if ()
+getCocktails("h");
 
 
 
-}
 
-getRecipe()
