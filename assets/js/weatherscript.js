@@ -1,5 +1,5 @@
 var userName;
-var city;
+// var city;
 var APIKey = "8c833adbed35c6453a1255f89d32c9b8";
 var cTemp;
 

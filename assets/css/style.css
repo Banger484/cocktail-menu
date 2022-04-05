@@ -5,10 +5,18 @@ body {
     text-align: center;
 }
 
+<<<<<<< HEAD
 .menu {
     margin: 30 vh;
   
   
+=======
+body {background-color: lightblue;
+height: 100vh}
+#menu {
+    display: flex;
+  align-items: center
+>>>>>>> 362db838f1b85b24483d42b75357fe2391827978
     /* align-content: center;
     justify-content: center; */
 }
@@ -40,6 +48,7 @@ h1 {
     text-align: center;
 
 }
+<<<<<<< HEAD
 
 .a-z-btn{
 border-radius: 12px;
@@ -51,3 +60,5 @@ background-color:grey;
   text-decoration: none;
   display: inline-block;
 }
+=======
+>>>>>>> 362db838f1b85b24483d42b75357fe2391827978
