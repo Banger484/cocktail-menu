@@ -1,11 +1,11 @@
 var userName;
 var city;
 var APIKey = "8c833adbed35c6453a1255f89d32c9b8";
-
+var cTemp;
 
 var user = {
-    userName: null,
-    city: null,
+    userName: userName.value,
+    // city: city.value,
     favDrink: [],
 }
 
@@ -33,7 +33,7 @@ fetch(queryURL)
     iconEl.src = "http://openweathermap.org/img/wn/" + cIcon + "@2x.png"
 	// iconEl.classList ="";
 	weatherEl.appendChild(iconEl)
-	var cTemp = data.main.temp;
+	cTemp = data.main.temp;
 	var tempEl = document.createElement("p");
 	tempEl.text = cTemp + " °F";
 	// tempEl.classList = "";
@@ -46,7 +46,7 @@ fetch(queryURL)
 }
 
 
-
+// localStorage.setItem("userFavorite", JSON.stringify(user));
 
 
 
