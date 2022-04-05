@@ -2,7 +2,6 @@ var coldDayDrinks = ["irish coffee", "Egg Nog - Healthy", "hot toddy"];
 var warmDayDrinks = ["Dirty Martini", "Old Fashioned", "Bloody Mary"];
 var hotDayDrinks = ["Mojito", "Barracuda", "Tequila Sunrise"];
 
-var cTemp = 60;
 
 function suggestDrink() {
   if (cTemp < 40) {
