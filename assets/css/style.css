@@ -1,0 +1,21 @@
+#main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.drink-card {
+    height: 250px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 1%
+}
+
+.drink-card img {
+    height: 200px;
+    width: 200px;
+}
+.drink-card p {
+    font-size: 1.1rem;
+    text-align: center;
+}
