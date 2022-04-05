@@ -1,0 +1,37 @@
+
+body {background-color: lightblue;
+height: 100vh}
+
+#menu {
+    display: flex;
+  align-items: center
+    /* align-content: center;
+    justify-content: center; */
+}
+
+#input {
+    display: flex;
+  align-items: center
+    /* align-content: center;
+    justify-content: center; */
+}
+
+h1 {
+    align-items: center;
+}
+.drink-card {
+    height: 250px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 1%
+}
+
+.drink-card img {
+    height: 200px;
+    width: 200px;
+}
+.drink-card p {
+    font-size: 1.1rem;
+    text-align: center;
+
+}
