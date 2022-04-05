@@ -13,7 +13,7 @@
 
 <body>
     <Header id="header">
-        <h1 class="subtitle 5">Project 1</h1>
+        <h1 class="subtitle 5">Select a Cocktail</h1>
     </Header>
     <main id="main">
         <div class="letter-search" id="letter-search">
@@ -78,14 +78,27 @@
             <div class="search-results" id="search-results">
               
             </div>
-
+            <button class="js-modal-trigger" data-target="modal-js-example">
+                Open JS example modal
+              </button>
 
   </main>
   
 
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content">
+      <div class="box">
+        <p>Modal JS example</p>
+        <!-- Your content -->
+      </div>
+    </div>
+  
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
    
-   
-
+<script src="./assets/js/modal.js"></script>
     <script src="./assets/js/suggestion.js"></script>
     <script src="./assets/js/alphabet.js"></script>
 

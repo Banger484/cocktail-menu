@@ -5,6 +5,7 @@ function letterSearch () {
     for (let i = 0; i < alphabet.length; i++) {
         var button = document.createElement('button')
         button.textContent = alphabet[i].toUpperCase()
+        button.setAttribute('class', 'a-z-btn')
         letterBox.appendChild(button)
         var letter = alphabet[i]
         if(letter === 'u' || letter === 'x'){
