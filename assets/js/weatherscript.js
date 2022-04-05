@@ -9,7 +9,8 @@ var user = {
     favDrink: [],
 }
 
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + "chicago"  + "&appid=" + APIKey +"&units=imperial";
+function weatherApi(city){
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city  + "&appid=" + APIKey +"&units=imperial";
 fetch(queryURL)
 .then(function (response) {
 	if (response.ok) {
@@ -20,29 +21,30 @@ fetch(queryURL)
 })
 .then(function(data){
 	console.log(data)
-
+	var weatherEl = document.getElementById("weather");
 	var date = data.dt;
     var reformatDate = moment(date, "X" ).format("l");
 	var dateEl = document.createElement("p")
 	dateEl.textContent = reformatDate;
-	dateEl.classList = ""
-	placeholder.appendChild(dateEl);
-
-
-	var cTemp = data.main.temp;
-	var tempEl = document.createElement("p");
-	tempEl.text = cTemp + " °F";
-	tempEl.classList = ""
-	placeholder.appendChild(tempEl)
-	
-
+	// dateEl.classList = ""
+	weatherEl.appendChild(dateEl);
 	var cIcon = data.weather[0].icon
 	var iconEl = document.createElement("img")
     iconEl.src = "http://openweathermap.org/img/wn/" + cIcon + "@2x.png"
-	iconEl.classList ="";
-	placeholder.appendChild(iconEl)
+	// iconEl.classList ="";
+	weatherEl.appendChild(iconEl)
+	var cTemp = data.main.temp;
+	var tempEl = document.createElement("p");
+	tempEl.text = cTemp + " °F";
+	// tempEl.classList = "";
+	weatherEl.appendChild(tempEl)
 
-})
+
+}).catch(function (error) {
+	console.warn(error);
+});
+}
+
 
 
 
