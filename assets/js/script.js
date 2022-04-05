@@ -2,9 +2,8 @@ var cocktailByLetter =
   "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=";
 var cocktailByName =
   "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
-var container = document.getElementById("container");
 var drink;
-var cardHolder = document.getElementById("main");
+var cardHolder = document.getElementById("search-results");
 
 function getCocktail(x) {
   fetch(`${cocktailByName}${x}`).then(function (res) {
