@@ -35,3 +35,44 @@ h1 {
     text-align: center;
 
 }
+
+.container{
+    padding: 25%;
+}
+
+#input{
+    display: flex;
+    flex-direction: column; 
+}
+
+header{
+    background-color: green;
+}
+
+main{
+    background-color: red;
+}
+
+.sidebar{
+    background-color: yellow;
+
+}
+
+.favorites{
+    background-color: blue;
+}
+
+.search-bar{
+    background-color: bisque;
+}
+ .search-by-letter{
+     background-color: brown;
+ }
+
+ .suggested-drink{
+     background-color: aqua;
+ } 
+
+ .search-results{
+     background-color:coral
+ }
