@@ -23,36 +23,25 @@ function getParams() {
 	user = searchParamsArr[0].split('=').pop();
 	zip = searchParamsArr[1].split('=').pop();
 
-	if (searchUsers.includes(user.value)) {
-		userEl = document.createElement("p");
-		userWelcomeEl.appendChild(userEl);
-		userWelcomeEl.textContent = "Welcome Back " + user + "!";
-			return;
-		}else {    
-		// searchUsers.push(user.value)
-		userEl = document.createElement("p");
-		userWelcomeEl.appendChild(userEl);
-		userWelcomeEl.textContent = "Welcome " + user + "!";
-		localStorage.setItem("userName", JSON.stringify(user.value));
-		}
 	weatherApi(zip);
 	suggestDrink(cTemp);
+	userNameFun(user);
 	
 }
 
-// function userNameFun() {
-// 	if (searchUsers.includes(user.value)) {
-// 	userEl = document.createElement("p");
-// 	userWelcomeEl.appendChild(userEl);
-// 	userWelcomeEl.textContent = "Welcome Back " + user + "!";
-//         return;
-//     }else {    
-//     searchUsers.push(user.value)
-// 	userEl = document.createElement("p");
-// 	userWelcomeEl.appendChild(userEl);
-// 	userWelcomeEl.textContent = "Welcome" + user + "!";
-// 	localStorage.setItem("userName", JSON.stringify(searchUsers));
-// }}
+function userNameFun() {
+	if (searchUsers.includes(user.value)) {
+	userEl = document.createElement("p");
+	userWelcomeEl.appendChild(userEl);
+	userWelcomeEl.textContent = "Welcome Back " + user + "!";
+        return;
+    }else {    
+    searchUsers.push(user.value)
+	userEl = document.createElement("p");
+	userWelcomeEl.appendChild(userEl);
+	userWelcomeEl.textContent = "Welcome" + user + "!";
+	localStorage.setItem("userName", JSON.stringify(searchUsers));
+}}
 
 function suggestDrink() {
   if (cTemp < 40) {
@@ -69,7 +58,7 @@ function suggestDrink() {
   }
 }
 
-function weatherApi(city){
+function weatherApi(zip){
 var queryURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip  + "&appid=" + APIKey + "&units=imperial";
 fetch(queryURL)
 .then(function (response) {
