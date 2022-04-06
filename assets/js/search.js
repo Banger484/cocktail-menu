@@ -16,7 +16,8 @@ function searchInput(event){
 	}
 	var cocktailLink = './cocktail.html?q=' + userNameVal + '&format=' + zipSearchVal;
   	location.assign(cocktailLink);
-	// localStorage.setItem("userName", JSON.stringify(userName.value))
+	localStorage.setItem("userName", JSON.stringify(userName.value))
+	localStorage.setItem("zipCode", JSON.stringify(zipSearch.value))
 }
 
 searchFormEL.addEventListener("submit", searchInput);

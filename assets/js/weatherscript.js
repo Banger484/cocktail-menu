@@ -4,44 +4,24 @@ var user;
 var coldDayDrinks = ["irish coffee", "Egg Nog - Healthy", "hot toddy"];
 var warmDayDrinks = ["Dirty Martini", "Old Fashioned", "Bloody Mary"];
 var hotDayDrinks = ["Mojito", "Barracuda", "Tequila Sunrise"];
-var zip;
+var zipSearch = JSON.parse(window.localStorage.getItem("zipCode"));
 userWelcomeEl = document.getElementById("userWelcome")
 var weatherEl;
 var userEl;
-var searchUsers = JSON.parse(window.localStorage.getItem("userName")) || [];
-
-
-// var user = {
-//     userName: userName.value,
-//     // city: city.value,
-//     // favDrink: [],
-// }
-
+var searchUsers = JSON.parse(window.localStorage.getItem("userName").toUpperCase())
 
 function getParams() {
-	var searchParamsArr = document.location.search.split('&');
-	user = searchParamsArr[0].split('=').pop();
-	zip = searchParamsArr[1].split('=').pop();
-
-	weatherApi(zip);
-	suggestDrink(cTemp);
-	userNameFun(user);
+	weatherApi(zipSearch);
+	userNameFun();
 	
 }
 
 function userNameFun() {
-	if (searchUsers.includes(user.value)) {
 	userEl = document.createElement("p");
 	userWelcomeEl.appendChild(userEl);
-	userWelcomeEl.textContent = "Welcome Back " + user + "!";
-        return;
-    }else {    
-    searchUsers.push(user.value)
-	userEl = document.createElement("p");
-	userWelcomeEl.appendChild(userEl);
-	userWelcomeEl.textContent = "Welcome" + user + "!";
-	localStorage.setItem("userName", JSON.stringify(searchUsers));
-}}
+	userWelcomeEl.textContent = "Welcome " + searchUsers + "!";
+	
+}
 
 function suggestDrink() {
   if (cTemp < 40) {
@@ -58,8 +38,8 @@ function suggestDrink() {
   }
 }
 
-function weatherApi(zip){
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip  + "&appid=" + APIKey + "&units=imperial";
+function weatherApi(x){
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + x  + "&appid=" + APIKey + "&units=imperial";
 fetch(queryURL)
 .then(function (response) {
 	if (response.ok) {
@@ -69,7 +49,7 @@ fetch(queryURL)
 	}
 })
 .then(function(data){
-	console.log(data)
+	console.log(data.main.temp)
 	weatherEl = document.getElementById("weather");
 	var date = data.dt;
     var reformatDate = moment(date, "X" ).format("l");
@@ -95,6 +75,7 @@ fetch(queryURL)
 	tempEl.textContent = `Current Temperature: ${cTemp} °F`;
 	// tempEl.classList = "";
 	weatherEl.appendChild(tempEl);
+	suggestDrink();
 });
 }
 
