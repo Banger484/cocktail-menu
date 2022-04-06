@@ -45,10 +45,6 @@
 }
 
 
-.header{
-    background-color: green;
-}
-
 main{
     background-color: red;
     display: flex;
