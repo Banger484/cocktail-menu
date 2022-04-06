@@ -1,22 +1,28 @@
+*{
+    background-color: rgb(166, 202, 214);
+}
+body {
+    text-align: center;
+}
 
-body {background-color: lightblue;
-height: 100vh}
-#menu {
-    display: flex;
-  align-items: center
+.menu {
+    margin: 30 vh;
+  
+  
     /* align-content: center;
     justify-content: center; */
 }
 
 #input {
-    display: flex;
-  align-items: center
-    /* align-content: center;
-    justify-content: center; */
+    margin: 30 vh;
+ 
+    
+    /* justify-content: center; */ 
 }
 
 h1 {
-    align-items: center;
+    margin: 30 vh;
+    padding: 50 vh;
 }
 .drink-card {
     height: 250px;
@@ -34,3 +40,57 @@ h1 {
     text-align: center;
 
 }
+
+
+.container{
+    padding: 25%;
+}
+
+#input{
+    display: flex;
+    flex-direction: column; 
+}
+
+header{
+    background-color: green;
+}
+
+main{
+    background-color: red;
+}
+
+.sidebar{
+    background-color: yellow;
+
+}
+
+.favorites{
+    background-color: blue;
+}
+
+.search-bar{
+    background-color: bisque;
+}
+ .search-by-letter{
+     background-color: brown;
+ }
+
+ .suggested-drink{
+     background-color: aqua;
+ } 
+
+ .search-results{
+     background-color:coral
+ }
+
+.a-z-btn{
+border-radius: 12px;
+background-color:grey; 
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
