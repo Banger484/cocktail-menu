@@ -29,6 +29,9 @@ function getCocktails(x) {
         var drinks = data.drinks;
         for (let i = 0; i < drinks.length; i++) {
           var card = document.createElement("div");
+          card.addEventListener("click", function(){
+            console.log("hi")
+          })
           card.setAttribute("class", "drink-card");
           cardHolder.appendChild(card);
           var drinkImg = document.createElement("img");
