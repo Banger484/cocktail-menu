@@ -1,8 +1,8 @@
-*{
-    background-color: rgb(166, 202, 214);
-}
+
 body {
     text-align: center;
+    background-color: rgb(166, 202, 214);
+    
 }
 
 .menu {
@@ -42,16 +42,7 @@ h1 {
 }
 
 
-.container{
-    padding: 25%;
-}
-
-#input{
-    display: flex;
-    flex-direction: column; 
-}
-
-header{
+.header{
     background-color: green;
 }
 
