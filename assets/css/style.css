@@ -24,25 +24,24 @@
     /* justify-content: center; */ 
 }
 
-h1 {
-    margin: 30 vh;
-    padding: 50 vh;
-}
 .drink-card {
-    height: 250px;
-    width: 200px;
+    height: 180px;
+    width: 100px;
     border: 1px solid black;
-    margin: 1%
+    margin: 1%;
+    background-color: black
 }
 
 .drink-card img {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 .drink-card p {
-    font-size: 1.1rem;
+    font-size: .85rem;
     text-align: center;
-
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: white;
 }
 
 
@@ -52,11 +51,13 @@ h1 {
 
 main{
     background-color: red;
+    display: flex;
 }
 
 .sidebar{
     background-color: yellow;
-
+    width: 15vw;
+    height: 100vh;
 }
 
 .favorites{
@@ -68,6 +69,7 @@ main{
 }
  .search-by-letter{
      background-color: brown;
+     height: 100%;
  }
 
  .suggested-drink{
@@ -75,10 +77,17 @@ main{
  } 
 
  .search-results{
-     background-color:coral
+     background-color:coral;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     width: 85vw;
  }
 
 .a-z-btn{
+    height: 40px;
+    width: 40%;
+    margin: 2%;
 border-radius: 12px;
 background-color:grey; 
   border: none;
@@ -89,15 +98,44 @@ background-color:grey;
   display: inline-block;
 }
 
-.notification{
-    top: 211px;
-    padding-bottom: 50px;
-}
+/* 
+modal testing
+*/
 
-.box{
-    width: 400px; 
-    height: 200px; 
-    margin: 25px;
+.modal {
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal img {
+      height: 200px;
+      width: 200px;
+  }
+  .modal-shell {
+      display: block;
+      background-color: palegoldenrod;
+      width: 40vw;
+      margin: 0 auto;
+  }
 
-}
-
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
