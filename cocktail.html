@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
 
-    <link rel="stylesheet" href="./assets/css/mystyles.scss">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mystyles.scss" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Cocktail Menu</title>
+  </head>
 
   <body>
     <!-- space for the header and the nav bar-->
-    <Header class="header">
+    <header>
       <h1 class="subtitle 5">Cocktail Menu</h1>
-            <div class="welcome-message">
-                <h1>Welcome! </h1>
-            </div>
-            <div class="weather" id="weather">
+      <div class="welcome-message">
+        <h1>Welcome!</h1>
+      </div>
+      <div class="weather" id="weather"></div>
+    </header>
 
-    
-            </div>
-    </Header>
-    
-    
-    
     <!-- main content of the page all held within the main tag-->
     <main>
       <!--div for the side bar and all the elements within-->
@@ -34,54 +37,30 @@
         <!--favorites drop down menu-->
         <div class="favorites">
           <select name="favorites" id="fav-selector">
-            <option value="placeholder">--Select one of your favorite drinks!--</option>
+            <option value="placeholder">
+              --Select one of your favorite drinks!--
+            </option>
           </select>
-              </div>
-              <!--search bar and submit button-->
-              <div class="search-bar">
-                <input type="text" placeholder="Search">
-                <button>Submit</button>
-              </div>
-              <!--space for the letter links that let you searcch by first letter-->
-              <div class="search-by-letter" id="search-by-letter">
-
-              </div>   
-            </div>
-            <!--Area for the drinks suggested to you based on the weather-->
-            <div class="suggested-drink">
-
-            </div>
-            <!-- area for the search results, content coming from the js-->
-            <div class="search-results" id="search-results">
-              
-            </div>
-            <button class="js-modal-trigger" data-target="modal-js-example">
-                Open JS example modal
-              </button>
-
-  </main>
-  
-
-  <div id="modal-js-example" class="modal">
-    <div class="modal-background"></div>
-  
-    <div class="modal-content">
-      <div class="box">
-        <p>Modal JS example</p>
-        <!-- Your content -->
+        </div>
+        <!--search bar and submit button-->
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <button>Submit</button>
+        </div>
+        <!--space for the letter links that let you searcch by first letter-->
+        <div class="search-by-letter" id="search-by-letter"></div>
       </div>
-    </div>
-  
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-   
-<script src="./assets/js/modal.js"></script>
+      <!--Area for the drinks suggested to you based on the weather-->
+      <div class="suggested-drink"></div>
+      <!-- area for the search results, content coming from the js-->
+      <div class="search-results" id="search-results"></div>
+    </main>
+
     <script src="./assets/js/suggestion.js"></script>
     <script src="./assets/js/alphabet.js"></script>
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/weatherscript.js"></script>
-</body>
-
+  </body>
 </html>
 
