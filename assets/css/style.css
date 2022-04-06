@@ -145,3 +145,25 @@ modal testing
     text-decoration: none;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+    /* Change the header color */
+    header {
+      background: blanchedalmond;
+    }
+  }
+  
+  /* Cards are stacked on top of each other at 768px or smaller */
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+    /* Change the header color */
+    header {
+      background: blanchedalmond;
+    }
+  }
+  
