@@ -1,8 +1,12 @@
+*{
+   
+}
 
 body {
     text-align: center;
-    background-color: rgb(166, 202, 214);
-    
+    background-image: url("/Users/ccccumar/Desktop/projects/cocktail-menu/assets/img/image-from-rawpixel-id-2922054-jpeg.jpeg");
+    background-repeat: repeat;
+    height: 100vh;
 }
 
 .menu {
@@ -13,32 +17,31 @@ body {
     justify-content: center; */
 }
 
-#input {
+#searchForm {
     margin: 30 vh;
  
     
     /* justify-content: center; */ 
 }
 
-h1 {
-    margin: 30 vh;
-    padding: 50 vh;
-}
 .drink-card {
-    height: 250px;
-    width: 200px;
+    height: 180px;
+    width: 100px;
     border: 1px solid black;
-    margin: 1%
+    margin: 1%;
+    background-color: black
 }
 
 .drink-card img {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 .drink-card p {
-    font-size: 1.1rem;
+    font-size: .85rem;
     text-align: center;
-
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: white;
 }
 
 
@@ -48,11 +51,13 @@ h1 {
 
 main{
     background-color: red;
+    display: flex;
 }
 
 .sidebar{
     background-color: yellow;
-
+    width: 15vw;
+    height: 100vh;
 }
 
 .favorites{
@@ -64,6 +69,7 @@ main{
 }
  .search-by-letter{
      background-color: brown;
+     height: 100%;
  }
 
  .suggested-drink{
@@ -71,10 +77,17 @@ main{
  } 
 
  .search-results{
-     background-color:coral
+     background-color:coral;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     width: 85vw;
  }
 
 .a-z-btn{
+    height: 40px;
+    width: 40%;
+    margin: 2%;
 border-radius: 12px;
 background-color:grey; 
   border: none;
@@ -85,32 +98,36 @@ background-color:grey;
   display: inline-block;
 }
 
-/* The Modal (background) */
+/* 
+modal testing
+*/
+
 .modal {
-    display: none; /* Hidden by default */
+    display: block;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+  .modal img {
+      height: 200px;
+      width: 200px;
   }
-  
+  .modal-shell {
+      display: block;
+      background-color: palegoldenrod;
+      width: 40vw;
+      margin: 0 auto;
+  }
+
   /* The Close Button */
-  .close {
-    color: #aaa;
+.close {
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -118,7 +135,7 @@ background-color:grey;
   
   .close:hover,
   .close:focus {
-    color: black;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
   }
