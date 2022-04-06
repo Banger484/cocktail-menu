@@ -29,7 +29,7 @@ function suggestDrink() {
       coldDayDrinks[Math.floor(Math.random() * coldDayDrinks.length)]
     );
   }
-  if (cTemp > 70) {
+  else if (cTemp > 70) {
     console.log(hotDayDrinks[Math.floor(Math.random() * hotDayDrinks.length)]);
   } else {
     console.log(
