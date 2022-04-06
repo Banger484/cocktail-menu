@@ -12,29 +12,30 @@
     <link rel="stylesheet" href="./assets/css/mystyles.scss">
     <link rel="stylesheet" href="./assets/css/style.css">
     
-<body class="container">
+<body>
 
     
-        <Header>
-            <h1 class="title is-1 is-vcentered $title-color-black" id="menu">Cocktail Menu</h1>
-        </Header>
-    <div class="notification is-primary column is-narrow box is-vcentered" style="width:600px; height: 300px;">
-        <div class="box" style="width: 400px; height: 200px;">
-       
-            <form id="searchForm">
-                <h3>Username:<input type="text" placeholder="Username" id="user-input"> </h3>
-                
+        <header>
+            
+        </header>
+    <div class="container">    
+        <div class="columns is-centered">
+            <div  class="notification column is-narrow" >
+                <h1 class="title is-1 is-vcentered has-text-black" id="menu">Cocktail Menu</h1> 
+                <div class="box">
+                    <form id="searchForm">
+                        <h3>Username:<input type="text" placeholder="Username"> </h3>
+                        
 
-                <h3>Zip Code:<input type="text" placeholder="55416" id="zip-input"> </h3>
-                
-                <button class="button is-light" id ="BtnSubmit">Submit</button>
-            </form> 
-        </div>
+                        <h3>City name:<input type="text" placeholder="City"> </h3>
+                        
+                        <button class="button is-light">Submit</button>
+                    </form> 
+                </div>
 
+            </div>
+      </div>
     </div>
-
-    
-
   
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/search.js"></script>
