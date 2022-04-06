@@ -2,7 +2,6 @@
 // var warmDayDrinks = ["Dirty Martini", "Old Fashioned", "Bloody Mary"];
 // var hotDayDrinks = ["Mojito", "Barracuda", "Tequila Sunrise"];
 
-// var cTemp;
 
 // function suggestDrink() {
 //   if (cTemp < 40) {

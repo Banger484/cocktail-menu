@@ -1,23 +1,28 @@
+*{
+    background-color: rgb(166, 202, 214);
+}
+body {
+    text-align: center;
+}
 
-body {background-color: lightblue;
-height: 100vh}
-
-#menu {
-    display: flex;
-  align-items: center
+.menu {
+    margin: 30 vh;
+  
+  
     /* align-content: center;
     justify-content: center; */
 }
 
 #input {
-    display: flex;
-  align-items: center
-    /* align-content: center;
-    justify-content: center; */
+    margin: 30 vh;
+ 
+    
+    /* justify-content: center; */ 
 }
 
 h1 {
-    align-items: center;
+    margin: 30 vh;
+    padding: 50 vh;
 }
 .drink-card {
     height: 250px;
@@ -34,4 +39,15 @@ h1 {
     font-size: 1.1rem;
     text-align: center;
 
+}
+
+.a-z-btn{
+border-radius: 12px;
+background-color:grey; 
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
