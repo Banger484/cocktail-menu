@@ -10,3 +10,5 @@ So have we.
 With our Cocktail-Menu Webtsite you can search your favorite drinks and find easy to use recipes, from the comfort of your own home!
 We even have weather based drink suggestions and the ability to save your favorite recipes. 
 It is an amazing user friendly site to help those who want bar quality cocktails in the safety and convienence of their own home.
+
+Our cocktail-menu website is a place to come to search your favorite drinks, get a drink suggestion based on your weather, and store your user information. 
