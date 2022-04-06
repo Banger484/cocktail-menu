@@ -13,10 +13,12 @@ function getCocktail(x) {
     }
     res.json().then(function (data) {
       var drink = data.drinks[0];
+      modalCreator(drink);
       console.log(drink.strDrink);
     });
   });
 }
+// getCocktail('hot toddy')
 
 function getCocktails(x) {
   fetch(`${cocktailByLetter}${x}`)
@@ -26,9 +28,15 @@ function getCocktails(x) {
         return;
       }
       res.json().then(function (data) {
+        console.log(data.drinks);
         var drinks = data.drinks;
         for (let i = 0; i < drinks.length; i++) {
           var card = document.createElement("div");
+          card.addEventListener("click", function () {
+            var currentDrink = drinks[i].strDrink;
+
+            getCocktail(currentDrink);
+          });
           card.setAttribute("class", "drink-card");
           cardHolder.appendChild(card);
           var drinkImg = document.createElement("img");
