@@ -1,5 +1,5 @@
 
-body {
+.body-background {
     text-align: center;
     /* background-image: url("./assets/img/image-from-rawpixel-id-2922054-jpeg.jpeg"); */
     background-repeat: repeat;
@@ -52,10 +52,6 @@ body {
 .welcome-message {
     background-color: salmon;
     color: white;
-}
-
-.header{
-    background-color: green;
 }
 
 main{
