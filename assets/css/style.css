@@ -1,8 +1,12 @@
+*{
+    
+}
 
 body {
     text-align: center;
-    background-color: rgb(166, 202, 214);
-    
+    background-image: url("/Users/ccccumar/Desktop/projects/cocktail-menu/assets/img/image-from-rawpixel-id-2922054-jpeg.jpeg");
+    background-repeat: repeat;
+    height: 100vh;
 }
 
 .menu {
@@ -13,7 +17,7 @@ body {
     justify-content: center; */
 }
 
-#input {
+#searchForm {
     margin: 30 vh;
  
     
