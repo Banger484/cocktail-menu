@@ -1,13 +1,40 @@
-var userName = document.getElementById('user-input')
-var citySearch = document.getElementById("city-input");
 var APIKey = "8c833adbed35c6453a1255f89d32c9b8";
 var cTemp;
-var formBtn = document.getElementById("BtnSubmit")
+// var formBtn = document.getElementById("BtnSubmit")
 
-var user = {
-    userName: userName.value,
-    // city: city.value,
-    // favDrink: [],
+// var user = {
+//     userName: userName.value,
+//     // city: city.value,
+//     // favDrink: [],
+// }
+
+function getParams() {
+	var searchParamsArr = document.location.search.split('&');
+	var user = searchParamsArr[0].split('=').pop();
+	var city = searchParamsArr[1].split('=').pop();
+	localStorage.setItem("userName", JSON.stringify(user))
+	weatherApi(city);
+	suggestDrink(cTemp);
+  }
+var coldDayDrinks = ["irish coffee", "Egg Nog - Healthy", "hot toddy"];
+var warmDayDrinks = ["Dirty Martini", "Old Fashioned", "Bloody Mary"];
+var hotDayDrinks = ["Mojito", "Barracuda", "Tequila Sunrise"];
+
+
+
+function suggestDrink() {
+  if (cTemp < 40) {
+    console.log(
+      coldDayDrinks[Math.floor(Math.random() * coldDayDrinks.length)]
+    );
+  }
+  if (cTemp > 70) {
+    console.log(hotDayDrinks[Math.floor(Math.random() * hotDayDrinks.length)]);
+  } else {
+    console.log(
+      warmDayDrinks[Math.floor(Math.random() * warmDayDrinks.length)]
+    );
+  }
 }
 
 function weatherApi(city){
@@ -21,8 +48,8 @@ fetch(queryURL)
 	}
 })
 .then(function(data){
-	console.log(data)
-	var weatherEl = document.getElementById("weather");
+	console.log(data.main.temp)
+	var weatherEl = document.getElementById("weather1");
 	var date = data.dt;
     var reformatDate = moment(date, "X" ).format("l");
 	var dateEl = document.createElement("p")
@@ -36,7 +63,7 @@ fetch(queryURL)
 	weatherEl.appendChild(iconEl)
 	cTemp = data.main.temp;
 	var tempEl = document.createElement("p");
-	tempEl.text = cTemp + " °F";
+	tempEl.textContent = cTemp + " °F";
 	// tempEl.classList = "";
 	weatherEl.appendChild(tempEl)
 
@@ -46,16 +73,7 @@ fetch(queryURL)
 });
 }
 
-formBtn.addEventListener("click", function(event){
-    event.preventDefault()
-    weatherApi(citySearch.value)
-    if (citySearch.value == 0 || userName.value == 0 ) {
-        alert("must enter a vaild user name and city!");
-        return;
-	}
-        localStorage.setItem("userName", JSON.stringify(userName.value))
-})
-
+getParams();
 
 
 
