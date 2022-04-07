@@ -20,61 +20,47 @@
     <title class="title">Cocktail Menu</title>
   </head>
 
-    <body>
+  <body>
     <div class="container-nav">
       <header>
-        <div class="container" style="top: 15px;">
+        <div class="container" style="top: 15px">
           <div class="columns">
-          <!-- space for the header and the nav bar-->
-              <div class="welcome-message column notification" id="welcome-message">
-                <h1 id="userWelcome"></h1>
-              </div>
-              <div class="column is-1"></div>
-              <div class="weather column notification is-flex is-flex-wrap-wrap" id="weather"></div>
+            <!-- space for the header and the nav bar-->
+            <div
+              class="welcome-message column notification"
+              id="welcome-message"
+            >
+              <h1 id="userWelcome"></h1>
+            </div>
+            <div class="column is-1"></div>
+            <div
+              class="weather column notification is-flex is-flex-wrap-wrap"
+              id="weather"
+            ></div>
           </div>
         </div>
       </header>
-    </div> 
+    </div>
     <!-- main content of the page all held within the main tag-->
     <main>
       <!--div for the side bar and all the elements within-->
       <div class="container">
-          <div class="sidebar column">
-            <!--favorites drop down menu-->
-            <!-- <div class="favorites">
-              <select name="favorites" id="fav-selector">
-                <option value="placeholder">
-                  --Select one of your favorite drinks!--
-                </option>
-              </select>
-            </div> -->
-            <!--search bar and submit button-->
-            <!-- <div class="search-bar">
-              <input type="text" placeholder="Search" />
-              <button>Submit</button>
-            </div> -->
-            <!--space for the letter links that let you searcch by first letter-->
-            <div class="search-by-letter" id="search-by-letter"></div>
-          </div>
+        <div class="sidebar column">
+          <!--space for the letter links that let you search by first letter-->
+          <div class="search-by-letter" id="search-by-letter"></div>
+        </div>
       </div>
 
-      <!--Area for the drinks suggested to you based on the weather-->
-      <div class="suggested-drink"></div>
       <!-- area for the search results, content coming from the js-->
       <div class="search-results" id="search-results"></div>
     </main>
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
 
-    <div id="modal-holder">
-
-    </div>
+    <div id="modal-holder"></div>
     <script src="./assets/js/modal.js"></script>
-    <script src="./assets/js/suggestion.js"></script>
     <script src="./assets/js/alphabet.js"></script>
-
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/weatherscript.js"></script>
   </body>
 </html>
-
