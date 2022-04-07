@@ -1,7 +1,10 @@
 var holder = document.getElementById('modal-holder')
-
+// function to create modals with drink data, taking in a drink as an argument
 function modalCreator (drink) {
+  // removes all previous modals, even though they hide on close
+  // I didn't want to leave the leftover modals in the html
   removeAllChildNodes(holder)
+  // Building out the modal structure, appending elements, and adding content.
   var modalContainer = document.createElement('div')
   modalContainer.setAttribute('class', 'modal')
   holder.appendChild(modalContainer)
@@ -37,10 +40,13 @@ function modalCreator (drink) {
   ingredientContainer.appendChild(ingredientTitle)
   var ingredientList = document.createElement('ul')
   ingredientContainer.appendChild(ingredientList)
+  // loops over the data object keys dynamically
   for (let i = 1; i < 16; i++) {
     var num = i;
     var ingredient = 'strIngredient';
     var measurement = 'strMeasure';
+    // the data held up to 15 different ingredients and measurements
+    // this logic only grabs the ing/meas that actually had values assigned.
     if (drink[ingredient + num] !== null && drink[measurement + num] !== null){
         var ing = drink[ingredient + num]
         var meas = drink[measurement + num]
