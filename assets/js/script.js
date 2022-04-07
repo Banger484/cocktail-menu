@@ -14,11 +14,9 @@ function getCocktail(x) {
     res.json().then(function (data) {
       var drink = data.drinks[0];
       modalCreator(drink);
-      console.log(drink.strDrink);
     });
   });
 }
-// getCocktail('hot toddy')
 
 function getCocktails(x) {
   fetch(`${cocktailByLetter}${x}`)
@@ -28,7 +26,6 @@ function getCocktails(x) {
         return;
       }
       res.json().then(function (data) {
-        console.log(data.drinks);
         var drinks = data.drinks;
         for (let i = 0; i < drinks.length; i++) {
           var card = document.createElement("div");
@@ -53,14 +50,3 @@ function getCocktails(x) {
     });
 }
 
-// This is for Modal Information
-// for (let j = 1; j < 16; j++) {
-//     var num = j;
-//     var ingredient = 'strIngredient';
-//     var measurement = 'strMeasure';
-//     if (drinks[i][ingredient + num] !== null && drinks[i][measurement + num] !== null){
-//         var ing = drinks[i][ingredient + num]
-//         var meas = drinks[i][measurement + num]
-//         console.log(`${meas} ${ing}`);
-//     }
-// }
