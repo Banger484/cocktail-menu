@@ -5,7 +5,7 @@ var coldDayDrinks = ["irish coffee", "Egg Nog - Healthy", "hot toddy"];
 var warmDayDrinks = ["Dirty Martini", "Old Fashioned", "Bloody Mary"];
 var hotDayDrinks = ["Mojito", "Barracuda", "Tequila Sunrise"];
 var zipSearch = JSON.parse(window.localStorage.getItem("zipCode"));
-userWelcomeEl = document.getElementById("userWelcome");
+userWelcomeEl = document.getElementById("welcome-message");
 var weatherEl;
 var weatherDivEl;
 var userEl;
