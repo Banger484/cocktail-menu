@@ -7,7 +7,9 @@ var hotDayDrinks = ["Mojito", "Barracuda", "Tequila Sunrise"];
 var zipSearch = JSON.parse(window.localStorage.getItem("zipCode"));
 userWelcomeEl = document.getElementById("userWelcome");
 var weatherEl;
+var weatherDivEl;
 var userEl;
+var weatherDivElsub;
 var searchUsers = JSON.parse(
   window.localStorage.getItem("userName").toUpperCase()
 );
@@ -54,15 +56,23 @@ function weatherApi(x) {
     })
     .then(function (data) {
       weatherEl = document.getElementById("weather");
+	  weatherDivEl = document.createElement("div")
+	  weatherDivEl.setAttribute("id", "weatherDiv1")
+	  var weatherDivId = document.getElementById('weatherDiv1')
+	  weatherEl.appendChild(weatherDivId)
+	  weatherDivElsub = document.createElement("div")
+	  weatherDivElsub.setAttribute("id", "weatherDiv1")
+	  var weatherDivId2 = document.getElementById('weatherDiv2')
+	  weatherEl.appendChild(weatherDivId2)
       var date = data.dt;
       var reformatDate = moment(date, "X").format("l");
       var dateEl = document.createElement("p");
       dateEl.textContent = "Today is " + reformatDate;
       // dateEl.classList = ""
-      weatherEl.appendChild(dateEl);
+      weatherDivEl.appendChild(dateEl);
       var city = data.name;
       var cityEl = document.createElement("p");
-      weatherEl.appendChild(cityEl);
+      weatherDivEl.appendChild(cityEl);
       cityEl.textContent = city;
       var cIcon = data.weather[0].icon;
       var iconEl = document.createElement("img");
