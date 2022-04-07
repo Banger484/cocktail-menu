@@ -1,4 +1,3 @@
-// varibles link to id elements html.index
 var userName = document.getElementById("user-input");
 var zipSearch = document.getElementById("zip-input");
 var searchFormEL = document.getElementById("searchForm");

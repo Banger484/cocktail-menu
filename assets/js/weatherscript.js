@@ -10,21 +10,22 @@ var weatherEl;
 var weatherDivEl;
 var userEl;
 var weatherDivElsub;
+// pulls values from local storage
 var searchUsers = JSON.parse(
   window.localStorage.getItem("userName").toUpperCase()
 );
-
+// function to run functions for weather and userdata to page.
 function getParams() {
   weatherApi(zipSearch);
   userNameFun();
 }
-
+//fuction create user welcome display
 function userNameFun() {
   userEl = document.createElement("p");
   userWelcomeEl.appendChild(userEl);
   userWelcomeEl.textContent = "Welcome " + searchUsers + "!";
 }
-
+//function to run suggested drink based on the weather temperature
 function suggestDrink() {
   if (cTemp < 40) {
     getCocktail(
@@ -38,7 +39,7 @@ function suggestDrink() {
     );
   }
 }
-
+// fuction to call weather api
 function weatherApi(x) {
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?zip=" +
@@ -53,7 +54,7 @@ function weatherApi(x) {
       } else {
         return Promise.reject(response);
       }
-    })
+    }) //function to pull data from weather api and dynamically create elements on cocktail.html
     .then(function (data) {
       weatherEl = document.getElementById("weather");
 	  weatherDivEl = document.createElement("div")
@@ -88,5 +89,5 @@ function weatherApi(x) {
       suggestDrink();
     });
 }
-
+// calls function to load website on load
 getParams();
