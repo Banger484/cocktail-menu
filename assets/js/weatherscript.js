@@ -10,7 +10,7 @@ var weatherEl;
 var userEl;
 var searchUsers = JSON.parse(window.localStorage.getItem("userName").toUpperCase())
 
-function getParams() {
+function getParams() {    // 
 	weatherApi(zipSearch);
 	userNameFun();
 	
