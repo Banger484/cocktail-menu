@@ -1,4 +1,4 @@
-
+/* body background */
 .body-background {
     text-align: center;
     /* background-image: url("./assets/img/image-from-rawpixel-id-2922054-jpeg.jpeg"); */
@@ -6,61 +6,49 @@
     height: 100vh;
 }
 
-.menu {
-    margin: 30 vh;
-  
-  
-    /* align-content: center;
-    justify-content: center; */
-}
-.subtitle-5 {
-    color: white;
-    font-size: larger;
-    font-weight: bolder;
-    background-color: darkcyan;
-    padding: 10px;
-}
-
-#searchForm {
-    margin: 30 vh;
- 
-    
-    /* justify-content: center; */ 
-}
-
-.drink-card {
-    color: darkcyan;
-    height: 180px;
-    width: 100px;
-    border: 1px solid darkcyan;
-    margin: 1%;
-    background-color: lightsalmon;
-    text-align: center;
-    border-radius: 25px;
-}
-
-.drink-card img {
-    height: 100px;
-    width: 100px;
-    border-radius: 25px 25px 0 0;
-}
-.drink-card p {
-    font-size: .85rem;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    color: white;
-}
-.welcome-message {
-    background-color: salmon;
-    color: white;
-}
-
 main{
     background-color: rgb(0, 0, 0);
     display: flex;
 }
 
+/* menu */
+.menu {
+    margin: 30 vh;
+  
+}
+/* search */
+#searchForm {
+    margin: 30 vh;
+}
+.container-nav{
+    background-color: rgb(0, 138, 138);
+    height: 18vh;  
+  }
+
+  #weather{
+      height: 16vh;
+      border-radius: 25px;
+      background-color: salmon;
+      color: white;
+      
+  }
+/* displays welcome "username" */
+.welcome-message {
+    background-color: salmon;
+    color: white;
+    height: 16vh;
+      border-radius: 25px;
+}
+
+
+  #userWelcome{
+      text-align: center;
+      margin-top: 35px;
+      font-size: 30px;
+  }
+
+
+/* side bar where letters are */
 .sidebar{
     background-color: blanchedalmond;
     width: 15vw;
@@ -68,21 +56,11 @@ main{
     
 }
 
-.favorites{
-    background-color: blue;
-}
-
-.search-bar{
-    background-color: rgb(81, 39, 177);
-}
  .search-by-letter{
      background-color: blanchedalmond;
      height: 100%;
  }
 
- .suggested-drink{
-     background-color: aqua;
- } 
 
  .search-results{
      background-color:rgb(222, 204, 177);
@@ -91,7 +69,7 @@ main{
      flex-wrap: wrap;
      width: 85vw;
  }
-
+/* buttons from a-z */
 .a-z-btn{
     height: 40px;
     width: 40%;
@@ -108,7 +86,7 @@ background-color: darkcyan;
 }
 
 /* 
-modal testing
+modal formatting to display drink cards
 */
 
 .modal {
@@ -154,6 +132,35 @@ modal testing
     width: 45%;  
     font-size: 1.15rem;
   }
+  /* card for suggested drink */
+.suggested-drink{
+    background-color: aqua;
+} 
+/* displays the idvidual drinks and recipes */
+.drink-card {
+    color: darkcyan;
+    height: 180px;
+    width: 100px;
+    border: 1px solid darkcyan;
+    margin: 1%;
+    background-color: lightsalmon;
+    text-align: center;
+    border-radius: 25px;
+}
+/* for the drink card image of the drink */
+.drink-card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 25px 25px 0 0;
+}
+/* displays the text of the drink card */
+.drink-card p {
+    font-size: .85rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: white;
+}
 
   /* The Close Button */
 .close {
@@ -162,7 +169,7 @@ modal testing
     font-size: 28px;
     font-weight: bold;
   }
-  
+/* hover over the close button */
   .close:hover,
   .close:focus {
     color: #000;
@@ -170,27 +177,40 @@ modal testing
     cursor: pointer;
   }
 
-  .container-nav{
+  @media screen and (max-width: 600px) {
+    div.welcome-message {
+      display: none;
+    }
+  }
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  } 
+
+.form-page{
+    background-color: blanchedalmond;
+    height: 100vh;
+}
+
+.notification{
     background-color: rgb(0, 138, 138);
-    height: 18vh;  
-  }
+    top: 300px;
+}
 
-  #weather{
-      height: 16vh;
-      border-radius: 25px;
-      background-color: salmon;
-      color: white;
-      
-  }
+.box{
+    
+    background-color: salmon;
+}
 
-  #welcome-message{
-      height: 16vh;
-      border-radius: 25px;
-  }
-
-  #userWelcome{
-      text-align: center;
-      margin-top: 35px;
-      font-size: 30px;
-  }
-
+#BtnSubmit{
+    left: 100px;
+}
