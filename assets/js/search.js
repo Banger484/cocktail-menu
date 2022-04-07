@@ -4,15 +4,16 @@ var searchFormEL = document.getElementById("searchForm");
 var formBtn = document.getElementById("BtnSubmit");
 var userNameVal;
 var zipSearchVal;
-
+//function to take values from user input. Inputs those values to the cocktail link and stores them in local storage
 function searchInput(event) {
   event.preventDefault();
   userNameVal = document.getElementById("user-input").value;
   zipSearchVal = document.getElementById("zip-input").value;
-
+// checks to make sure user input values for user name and zip code
   if (zipSearch.value == 0 || userName.value == 0) {
     return;
   }
+  // takes user input and inputs them to link address
   var cocktailLink =
     "./cocktail.html?q=" + userNameVal + "&format=" + zipSearchVal;
   location.assign(cocktailLink);
