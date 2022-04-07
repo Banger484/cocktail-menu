@@ -1,3 +1,4 @@
+// varibles link to id elements html.index
 var userName = document.getElementById("user-input");
 var zipSearch = document.getElementById("zip-input");
 var searchFormEL = document.getElementById("searchForm");
@@ -13,12 +14,13 @@ function searchInput(event) {
   if (zipSearch.value == 0 || userName.value == 0) {
     return;
   }
-  // takes user input and inputs them to link address
+  // takes user input and inputs them to link address for cocktail page.
   var cocktailLink =
     "./cocktail.html?q=" + userNameVal + "&format=" + zipSearchVal;
-  location.assign(cocktailLink);
+  location.assign(cocktailLink); 
+  // stores user inputs to local storage
   localStorage.setItem("userName", JSON.stringify(userName.value));
   localStorage.setItem("zipCode", JSON.stringify(zipSearch.value));
 }
-
+// event handles event for click of submit button
 searchFormEL.addEventListener("submit", searchInput);
