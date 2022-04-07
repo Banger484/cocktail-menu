@@ -33,3 +33,10 @@ Challenges included not being able to originally implement tailwind due to havin
 Successes encompassed our strong ability to work well as a team, we all supported one another. Bret's amazing code to display the drink cards and modals. Our user storage feature. General asthetitcs, and the fact that we have a functional website!
 
 Direction for future development includes the aspect of saving favorite drinks for the user in local storage. We would like to have a site that users can feel like is geared towards them and takes their taste into consideration. Another goal would be to create the capability for users to share their stored favorite drinks with friends. We also would like to implement a login with user authetication and use cookies to save data in local storage. Another future idea would be to locate liquor stores and bars near the user to get supplies or enjoy a drink. 
+
+![Screen Shot 2022-04-07 at 4 09 57 PM](https://user-images.githubusercontent.com/97856843/162310575-5b150b6f-d078-448e-be99-b3c6923bc53f.png)
+
+![Screen Shot 2022-04-07 at 4 04 13 PM](https://user-images.githubusercontent.com/97856843/162309505-616d9e32-05f0-479b-b8d5-ac0f1a743513.png)
+
+![Screen Shot 2022-04-07 at 4 00 28 PM](https://user-images.githubusercontent.com/97856843/162309986-24496f07-5b17-4acd-9883-e833cdee6b74.png)
+
