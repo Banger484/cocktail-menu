@@ -10,7 +10,7 @@ But your old favorites don't have to be.
 Have you missed your favorite bar? How about your favorite drinks?
 So have we.
 With our Cocktail-Menu Webtsite you can search your favorite drinks and find easy to use recipes, from the comfort of your own home!
-We even have weather based drink suggestions and the ability to save your favorite recipes. 
+We even have weather based drink suggestions!
 It is an amazing user friendly site to help those who want bar quality cocktails in the safety and convienence of their own home.
 
 Our cocktail-menu website is a place to come to search your favorite drinks, get a drink suggestion based on your weather. It even stores your username information.
@@ -18,9 +18,13 @@ Our cocktail-menu website is a place to come to search your favorite drinks, get
 To create our webpage we used html, css, javascript, and bulma. Bulma is a free css framework. We did all our coding through vitrual studio code and created our repository using github.
 
 We worked as a team but broke down tasks to create our ultimate website. Bret and Aaron worked to tackle the javascript while Cumar and Elizabeth coded the html and css, as well as worked with bulma. 
-Bret specifically coded
-Aaron worked on 
-Cumar created
+
+Bret specifically coded and worked with the cocktail database. He created a function to grab an array of drinks by the first letter and generate drink cards, a function to grab a drink by specific name, a function to generate alphabet buttons with event listeners, and a function to generate a modal for a selected drink.
+
+Aaron worked on the javascript for our search form, javascript for weatherapi weatherscript.js, and local storage for the username and zip code. 
+
+Cumar made mockups and our wire framing, worked on the html structure/framework, and then helped with the css styling on the form and the cocktails page.
+
 Elizabeth coded aspects of the html, created the css, formatted the colors, helped create the modals, and integrated bulma. She also wrote this README file. 
 
 
@@ -28,4 +32,4 @@ Challenges included not being able to originally implement tailwind due to havin
 
 Successes encompassed our strong ability to work well as a team, we all supported one another. Bret's amazing code to display the drink cards and modals. Our user storage feature. General asthetitcs, and the fact that we have a functional website!
 
-Direction for future development includes the aspect of saving favorite drinks for the user in local storage. We would like to have a site that users can feel like is geared towards them and takes their taste into consideration. 
+Direction for future development includes the aspect of saving favorite drinks for the user in local storage. We would like to have a site that users can feel like is geared towards them and takes their taste into consideration. Another goal would be to create the capability for users to share their stored favorite drinks with friends. We also would like to implement a login with user authetication and use cookies to save data in local storage. Another future idea would be to locate liquor stores and bars near the user to get supplies or enjoy a drink. 
