@@ -11,6 +11,31 @@ main{
     display: flex;
 }
 
+header{
+  margin-bottom: 0px !important;
+  height: 20vh;
+  padding: 1%;
+  background-color: rgb(0, 138, 138);
+}
+.form-page{
+  background-color: blanchedalmond;
+  height: 100vh;
+}
+
+#notification{
+  background-color: rgb(0, 138, 138);
+  top: 300px;
+}
+
+.box{
+  
+  background-color: salmon;
+}
+
+#BtnSubmit{
+  left: 100px;
+}
+
 /* menu */
 .menu {
     margin: 30 vh;
@@ -20,16 +45,15 @@ main{
 #searchForm {
     margin: 30 vh;
 }
-.container-nav{
-    background-color: rgb(0, 138, 138);
-    height: 18vh;  
-  }
+
 
   #weather{
       height: 16vh;
       border-radius: 25px;
       background-color: salmon;
       color: white;
+      /* width: 40vw; */
+      
       
   }
 /* displays welcome "username" */
@@ -38,6 +62,7 @@ main{
     color: white;
     height: 16vh;
       border-radius: 25px;
+      /* width: 40vw; */
 }
 
 
@@ -177,6 +202,18 @@ modal formatting to display drink cards
     cursor: pointer;
   }
 
+  #weatherDiv1{
+    font-size: 25px;
+    width: 45%;
+    
+  }
+
+  #weatherDiv2{
+    font-size: 25px;
+    width: 45%;
+    
+  }
+
   @media screen and (max-width: 600px) {
     div.welcome-message {
       display: none;
@@ -196,21 +233,3 @@ modal formatting to display drink cards
     }
   } 
 
-.form-page{
-    background-color: blanchedalmond;
-    height: 100vh;
-}
-
-.notification{
-    background-color: rgb(0, 138, 138);
-    top: 300px;
-}
-
-.box{
-    
-    background-color: salmon;
-}
-
-#BtnSubmit{
-    left: 100px;
-}
