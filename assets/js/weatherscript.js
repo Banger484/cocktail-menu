@@ -39,7 +39,7 @@ function suggestDrink() {
 }
 
 function weatherApi(x){
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + x  + "&appid=" + APIKey + "&units=imperial";
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + x  + "&appid=" + APIKey + "&units=imperial";
 fetch(queryURL)
 .then(function (response) {
 	if (response.ok) {
@@ -63,7 +63,7 @@ fetch(queryURL)
 	cityEl.textContent = city;
 	var cIcon = data.weather[0].icon;
 	var iconEl = document.createElement("img");
-    iconEl.src = "http://openweathermap.org/img/wn/" + cIcon + "@2x.png";
+    iconEl.src = "https://openweathermap.org/img/wn/" + cIcon + "@2x.png";
 	// iconEl.classList ="";
 	weatherEl.appendChild(iconEl);
 	var condition = data.weather[0].description;

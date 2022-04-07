@@ -21,37 +21,43 @@
   </head>
 
     <body>
-      <div class="container header content">
-        <div class="columns">
-        <!-- space for the header and the nav bar-->
-          <header>
-            <div class="welcome-message column notification">
-              <h1 id="userWelcome"></h1>
-            </div>
-            <div class="weather column notification " id="weather"></div>
-          </header>
+    <div class="container-nav">
+      <header>
+        <div class="container" style="top: 15px;">
+          <div class="columns">
+          <!-- space for the header and the nav bar-->
+              <div class="welcome-message column notification" id="welcome-message">
+                <h1 id="userWelcome"></h1>
+              </div>
+              <div class="column is-1"></div>
+              <div class="weather column notification is-flex is-flex-wrap-wrap" id="weather"></div>
+          </div>
         </div>
-      </div>
+      </header>
+    </div> 
     <!-- main content of the page all held within the main tag-->
     <main>
       <!--div for the side bar and all the elements within-->
-      <div class="sidebar">
-        <!--favorites drop down menu-->
-        <!-- <div class="favorites">
-          <select name="favorites" id="fav-selector">
-            <option value="placeholder">
-              --Select one of your favorite drinks!--
-            </option>
-          </select>
-        </div> -->
-        <!--search bar and submit button-->
-        <!-- <div class="search-bar">
-          <input type="text" placeholder="Search" />
-          <button>Submit</button>
-        </div> -->
-        <!--space for the letter links that let you searcch by first letter-->
-        <div class="search-by-letter" id="search-by-letter"></div>
+      <div class="container">
+          <div class="sidebar column">
+            <!--favorites drop down menu-->
+            <!-- <div class="favorites">
+              <select name="favorites" id="fav-selector">
+                <option value="placeholder">
+                  --Select one of your favorite drinks!--
+                </option>
+              </select>
+            </div> -->
+            <!--search bar and submit button-->
+            <!-- <div class="search-bar">
+              <input type="text" placeholder="Search" />
+              <button>Submit</button>
+            </div> -->
+            <!--space for the letter links that let you searcch by first letter-->
+            <div class="search-by-letter" id="search-by-letter"></div>
+          </div>
       </div>
+
       <!--Area for the drinks suggested to you based on the weather-->
       <div class="suggested-drink"></div>
       <!-- area for the search results, content coming from the js-->
