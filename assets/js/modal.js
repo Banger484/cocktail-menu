@@ -10,7 +10,7 @@ function modalCreator (drink) {
   modalContainer.appendChild(shell)
   var closeBtn = document.createElement('span')
   closeBtn.setAttribute('class', 'close')
-  closeBtn.textContent = '❌'
+  closeBtn.textContent = 'ⓧ'
   closeBtn.addEventListener('click', function() {
     modalContainer.style.display = 'none'
   })
@@ -23,10 +23,15 @@ function modalCreator (drink) {
   var drinkImg = document.createElement('img')
   drinkImg.setAttribute('src', drink.strDrinkThumb)
   modalContent.appendChild(drinkImg)
+  var bottomContent = document.createElement('div')
+  bottomContent.setAttribute('class', 'modal-bottom')
+  modalContent.appendChild(bottomContent)
   var ingredientContainer = document.createElement('div')
+  ingredientContainer.setAttribute('class', 'modal-left')
   var recipeContainer = document.createElement('div')
-  modalContent.appendChild(ingredientContainer)
-  modalContent.appendChild(recipeContainer)
+  recipeContainer.setAttribute('class', 'modal-right')
+  bottomContent.appendChild(ingredientContainer)
+  bottomContent.appendChild(recipeContainer)
   var ingredientTitle = document.createElement('h3')
   ingredientTitle.textContent = 'Ingredients:'
   ingredientContainer.appendChild(ingredientTitle)

@@ -36,11 +36,13 @@
     margin: 1%;
     background-color: lightsalmon;
     text-align: center;
+    border-radius: 25px;
 }
 
 .drink-card img {
     height: 100px;
     width: 100px;
+    border-radius: 25px 25px 0 0;
 }
 .drink-card p {
     font-size: .85rem;
@@ -124,13 +126,33 @@ modal testing
   .modal img {
       height: 200px;
       width: 200px;
+      border-radius: 25px;
   }
   .modal-shell {
       color: white;
       display: block;
       background-color: rgb(0, 138, 138);
-      width: 40vw;
+      width: 30vw;
       margin: 0 auto;
+      padding: 1%;
+      border-radius: 25px;
+      text-align: center;
+  }
+  .modal-bottom {
+      display: flex;
+      justify-content: center;
+  }
+  .modal-left {
+    /* background-color: red; */
+    height: 40%;
+    width: 45%;
+    font-size: 1.3rem;    
+  }
+  .modal-right {
+    /* background-color: red; */
+    height: 40%;
+    width: 45%;  
+    font-size: 1.15rem;
   }
 
   /* The Close Button */
