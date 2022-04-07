@@ -57,37 +57,34 @@ function weatherApi(x) {
     .then(function (data) {
       weatherEl = document.getElementById("weather");
 	  weatherDivEl = document.createElement("div")
+	  weatherEl.appendChild(weatherDivEl)
 	  weatherDivEl.setAttribute("id", "weatherDiv1")
 	  var weatherDivId = document.getElementById('weatherDiv1')
-	  weatherEl.appendChild(weatherDivId)
 	  weatherDivElsub = document.createElement("div")
-	  weatherDivElsub.setAttribute("id", "weatherDiv1")
+	  weatherEl.appendChild(weatherDivElsub)
+	  weatherDivElsub.setAttribute("id", "weatherDiv2")
 	  var weatherDivId2 = document.getElementById('weatherDiv2')
-	  weatherEl.appendChild(weatherDivId2)
       var date = data.dt;
       var reformatDate = moment(date, "X").format("l");
       var dateEl = document.createElement("p");
       dateEl.textContent = "Today is " + reformatDate;
-      // dateEl.classList = ""
-      weatherDivEl.appendChild(dateEl);
+      weatherDivId.appendChild(dateEl);
       var city = data.name;
       var cityEl = document.createElement("p");
-      weatherDivEl.appendChild(cityEl);
+      weatherDivId.appendChild(cityEl);
       cityEl.textContent = city;
       var cIcon = data.weather[0].icon;
       var iconEl = document.createElement("img");
       iconEl.src = "https://openweathermap.org/img/wn/" + cIcon + "@2x.png";
-      // iconEl.classList ="";
-      weatherEl.appendChild(iconEl);
+      weatherDivId2.appendChild(iconEl);
       var condition = data.weather[0].description;
       var conditionEl = document.createElement("p");
-      weatherEl.appendChild(conditionEl);
+      weatherDivId2.appendChild(conditionEl);
       conditionEl.textContent = condition;
       cTemp = data.main.temp;
       var tempEl = document.createElement("p");
       tempEl.textContent = `Current Temperature: ${cTemp} °F`;
-      // tempEl.classList = "";
-      weatherEl.appendChild(tempEl);
+      weatherDivId.appendChild(tempEl);
       suggestDrink();
     });
 }
