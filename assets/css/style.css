@@ -36,11 +36,13 @@
     margin: 1%;
     background-color: lightsalmon;
     text-align: center;
+    border-radius: 25px;
 }
 
 .drink-card img {
     height: 100px;
     width: 100px;
+    border-radius: 25px 25px 0 0;
 }
 .drink-card p {
     font-size: .85rem;
@@ -60,9 +62,10 @@ main{
 }
 
 .sidebar{
-    background-color: yellow;
+    background-color: blanchedalmond;
     width: 15vw;
     height: 100vh;
+    
 }
 
 .favorites{
@@ -82,7 +85,7 @@ main{
  } 
 
  .search-results{
-     background-color:blanchedalmond;
+     background-color:rgb(222, 204, 177);
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
@@ -98,6 +101,7 @@ background-color: darkcyan;
   border: none;
   color: salmon;
   font-size: 16px;
+  font-weight: bolder;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -122,13 +126,33 @@ modal testing
   .modal img {
       height: 200px;
       width: 200px;
+      border-radius: 25px;
   }
   .modal-shell {
       color: white;
       display: block;
-      background-color: darkcyan;
-      width: 40vw;
+      background-color: rgb(0, 138, 138);
+      width: 30vw;
       margin: 0 auto;
+      padding: 1%;
+      border-radius: 25px;
+      text-align: center;
+  }
+  .modal-bottom {
+      display: flex;
+      justify-content: center;
+  }
+  .modal-left {
+    /* background-color: red; */
+    height: 40%;
+    width: 45%;
+    font-size: 1.3rem;    
+  }
+  .modal-right {
+    /* background-color: red; */
+    height: 40%;
+    width: 45%;  
+    font-size: 1.15rem;
   }
 
   /* The Close Button */
@@ -146,24 +170,27 @@ modal testing
     cursor: pointer;
   }
 
-  @media screen and (max-width: 992px) {
-    .card {
-      width: 50%;
-    }
-    /* Change the header color */
-    header {
-      background: blanchedalmond;
-    }
+  .container-nav{
+    background-color: rgb(0, 138, 138);
+    height: 18vh;  
   }
-  
-  /* Cards are stacked on top of each other at 768px or smaller */
-  @media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
-    }
-    /* Change the header color */
-    header {
-      background: blanchedalmond;
-    }
+
+  #weather{
+      height: 16vh;
+      border-radius: 25px;
+      background-color: salmon;
+      color: white;
+      
   }
-  
+
+  #welcome-message{
+      height: 16vh;
+      border-radius: 25px;
+  }
+
+  #userWelcome{
+      text-align: center;
+      margin-top: 35px;
+      font-size: 30px;
+  }
+
