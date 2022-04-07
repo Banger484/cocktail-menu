@@ -60,9 +60,10 @@ main{
 }
 
 .sidebar{
-    background-color: yellow;
+    background-color: blanchedalmond;
     width: 15vw;
     height: 100vh;
+    
 }
 
 .favorites{
@@ -82,7 +83,7 @@ main{
  } 
 
  .search-results{
-     background-color:blanchedalmond;
+     background-color:rgb(222, 204, 177);
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
@@ -127,7 +128,7 @@ modal testing
   .modal-shell {
       color: white;
       display: block;
-      background-color: darkcyan;
+      background-color: rgb(0, 138, 138);
       width: 40vw;
       margin: 0 auto;
   }
@@ -146,3 +147,28 @@ modal testing
     text-decoration: none;
     cursor: pointer;
   }
+
+  .container-nav{
+    background-color: rgb(0, 138, 138);
+    height: 18vh;  
+  }
+
+  #weather{
+      height: 16vh;
+      border-radius: 25px;
+      background-color: salmon;
+      color: white;
+      
+  }
+
+  #welcome-message{
+      height: 16vh;
+      border-radius: 25px;
+  }
+
+  #userWelcome{
+      text-align: center;
+      margin-top: 35px;
+      font-size: 30px;
+  }
+
