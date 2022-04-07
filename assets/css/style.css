@@ -196,4 +196,24 @@ modal formatting to display drink cards
     }
   } 
 
+html-page-structure
+.form-page{
+    background-color: blanchedalmond;
+    height: 100vh;
+}
+
+.notification{
+    background-color: rgb(0, 138, 138);
+    top: 300px;
+}
+
+.box{
+    
+    background-color: salmon;
+}
+
+#BtnSubmit{
+    left: 100px;
+}
+
   
